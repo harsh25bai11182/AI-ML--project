@@ -1,5 +1,9 @@
 import pickle
+import os
 
+if not os.path.exists("model.pkl") or not os.path.exists("vectorizer.pkl"):
+    import train  
+#loading model and veectorizer
 model = pickle.load(open("model.pkl", "rb"))
 vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
 def detect_issue(text):
@@ -14,6 +18,7 @@ def detect_issue(text):
         return "Positive Feedback", "Keep up the good work"
     else:
         return "General", "Improve engagement"
+#input
 print("Choose input method:")
 print("1. Type your own feedback")
 print("2. Select from options")
@@ -26,7 +31,6 @@ options = {
     "3": "Teaching is excellent",
     "4": "Subject is difficult"
 }
-#feedback
 if choice == "2":
     print("\nOptions:")
     for k, v in options.items():
@@ -40,9 +44,11 @@ vec = vectorizer.transform([feedback])
 prediction = model.predict(vec)[0]
 prob = max(model.predict_proba(vec)[0])
 
+#issue
 issue, suggestion = detect_issue(feedback)
 
-print("\n--- RESULT ---")
+#output
+print("\n-RESULT")
 print("Feedback:", feedback)
 print("Sentiment:", prediction)
 print("Confidence:", round(prob, 2))
