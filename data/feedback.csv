@@ -1,1 +1,11 @@
-
+text,sentiment
+The teacher explains very clearly,positive
+Too fast to understand,negative
+Good but difficult subject,neutral
+Very helpful and interactive,positive
+Not clear explanations,negative
+Content is okay but confusing,neutral
+Excellent teaching style,positive
+Too much syllabus and fast pace,negative
+Average explanation,neutral
+Very engaging class,positive
