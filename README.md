@@ -54,21 +54,8 @@ python app.py
  The system will automatically train the model if it is not available.
 
 ##  Example
+<img width="1057" height="748" alt="Screenshot 2026-03-28 190138" src="https://github.com/user-attachments/assets/05cea22e-778f-4147-a548-ba2080cf200b" />
 
- Input:
-
-```
-Teacher is too fast
-```
-
-### Output:
-
-```
-Sentiment: Negative  
-Confidence: 0.75  
-Issue: Speed  
-Suggestion: Reduce teaching pace  
-```
 
 ##  Applications
 
