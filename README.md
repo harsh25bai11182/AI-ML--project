@@ -45,7 +45,7 @@ AIML PROJECTS/
 pip install pandas scikit-learn
 ```
 
- 2. Run the application
+ 2. Run the application (put this in terminal)
 
 ```
 python app.py
